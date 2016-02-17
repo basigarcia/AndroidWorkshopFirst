@@ -1,0 +1,81 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000006ee0ebb7, pid=12204, tid=9316
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_79-b15) (build 1.7.0_79-b15)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x1cebb7]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000f5d4800):  JavaThread "Forward streams with process: command 'C:\Program Files\Java\jdk1.7.0_79\bin\java.exe' Thread 2" [_thread_in_vm, id=9316, stack(0x000000004f9a0000,0x000000004faa0000)]
+
+siginfo: ExceptionCode=0xc0000005, writing address 0x000000004fa95ea0
+
+Registers:
+RAX=0x000000004fa95ea0, RBX=0x0000000000000007, RCX=0x0000000000006000, RDX=0x000000004f9a9160
+RSP=0x000000004fa9bea0, RBP=0x0000000000000000, RSI=0x000000004fa9bea0, RDI=0x0000000000000007
+R8 =0x0000000000000009, R9 =0x000000000f5d4800, R10=0x000000004fa9c048, R11=0x000000004fa9c070
+R12=0x000000004fa9c070, R13=0x000000004fa9bfe8, R14=0x000000004fa9c0a0, R15=0x0000000002110840
+RIP=0x000000006ee0ebb7, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x000000004fa9bea0)
+0x000000004fa9bea0:   000000000dad6c98 0000000000000000
+0x000000004fa9beb0:   0000000000000000 0000000000000000
+0x000000004fa9bec0:   0000000000000000 000000006ee0f6fa
+0x000000004fa9bed0:   000000004fa9c101 000000000dad6c98
+0x000000004fa9bee0:   000000000f5d4800 000000000f5d4800
+0x000000004fa9bef0:   0000000000000000 0000000000000000
+0x000000004fa9bf00:   0000000000000000 000000006ecc0b2f
+0x000000004fa9bf10:   0000000000000000 0000000000000000
+0x000000004fa9bf20:   0000000000000000 0000000000000000
+0x000000004fa9bf30:   000000004fa9c1d8 000000006eeeaaad
+0x000000004fa9bf40:   000000004fa9bfd0 0000000000000000
+0x000000004fa9bf50:   0000000000000000 0000000000000000
+0x000000004fa9bf60:   0000000000000000 000000000f5d4800
+0x000000004fa9bf70:   0000000000000000 000000006ec55396
+0x000000004fa9bf80:   000000004fa9bfd0 000000004fa9c140
+0x000000004fa9bf90:   000000000f5d49e8 0000000000000000 
+
+Instructions: (pc=0x000000006ee0ebb7)
+0x000000006ee0eb97:   48 89 6c 24 30 33 ed 66 90 e8 6b bb 07 00 ff c3
+0x000000006ee0eba7:   48 63 c8 48 8b c6 48 0f af cf 48 ff c7 48 2b c1
+0x000000006ee0ebb7:   89 28 48 63 c3 48 3b 05 75 db 52 00 7e db 48 8b
+0x000000006ee0ebc7:   6c 24 30 48 8b 5c 24 38 48 8b 74 24 40 48 83 c4 
+
+
+Register to memory mapping:
+
+RAX=0x000000004fa95ea0 is pointing into the stack for thread: 0x000000000f5d4800
+RBX=0x0000000000000007 is an unknown value
+RCX=0x0000000000006000 is an unknown value
+RDX=0x000000004f9a9160 is pointing into the stack for thread: 0x000000000f5d4800
+RSP=0x000000004fa9bea0 is pointing into the stack for thread: 0x000000000f5d4800
+RBP=0x0000000000000000 is an unknown value
+RSI=0x000000004fa9bea0 is pointing into the stack for thread: 0x000000000f5d4800
+RDI=0x0000000000000007 is an unknown value
+R8 =0x0000000000000009 is an unknown value
+R9 =0x000000000f5d4800 is a thread
+R10=0x000000004fa9c048 is pointing into the stack for thread: 0x000000000f5d4800
+R11=0x000000004fa9c070 is pointing into the stack for thread: 0x000000000f5d4800
+R12=0x000000004fa9c070 is pointing into the stack for thread: 0x000000000f5d4800
+R13=0x000000004fa9bfe8 is pointing into the stack for thread: 0x000000000f5d4800
+R14=0x000000004fa9c0a0 is pointing into the stack for thread: 0x000000000f5d4800
+R15=0x0000000002110840 is at code_begin+0 in an Interpreter codelet
+method entry point (kind = zerolocals)  [0x0000000002110840, 0x0000000002110b40]  768 bytes
+
+
+Stack: [0x000000004f9a0000,0x000000004faa0000],  sp=0x000000004fa9bea0,  free space=1007k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1cebb7]
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
